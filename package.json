@@ -1,0 +1,21 @@
+{
+  "name": "astro-docker-demo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^7.0.4",
+    "@prisma/client": "^5.9.1",
+    "astro": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "prisma": "^5.9.1"
+  }
+}

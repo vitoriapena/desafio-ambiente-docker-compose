@@ -1,0 +1,36 @@
+services:
+  app:
+    build: .
+    ports:
+      - "4321:4321"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/mydatabase
+    depends_on:
+      - db
+    user: "1001:1001"
+    networks:
+      - astro-network
+    restart: always
+
+  db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - astro-network
+    restart: always
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  astro-network:
+    driver: bridge
