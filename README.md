@@ -20,8 +20,8 @@ A simple message board application built with Astro, Docker, and PostgreSQL.
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone git@github.com:vitoriapena/desafio-ambiente-docker-compose.git
+cd desafio-ambiente-docker-compose
 ```
 
 2. Copy the example environment file:
